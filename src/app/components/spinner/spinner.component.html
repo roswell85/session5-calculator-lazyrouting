@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+
+
+<div class="loader" *ngIf="spinner"></div>
+<div class="calc" *ngIf="spinner2">
+
+  <table *ngIf="showCalc">
+
+
+
+    <tr class="header"> <th colspan="4">Angular Calculator</th></tr>
+    <tr>
+      <td colspan="4"><input readonly placeholder="0" [value]="inputValue"></td>
+    </tr>
+    <tr *ngFor="let r of metaData">
+      <td *ngFor="let c of r">
+        <button #btn (click)="HandleButtonClick3(c,btn)">{{c}}</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button #btn (click) = "HandleButtonClick3('result',btn)">result</button>
+      </td>
+      <td colspan="2">
+        <button #btn (click) = "HandleButtonClick3('reset',btn)">reset</button>
+      </td>
+    </tr>
+
+  </table>
+</div>
+
+</body>
+</html>

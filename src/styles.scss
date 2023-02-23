@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+.centerContent {
+  display: flex;
+  justify-content: center;
+}
+
+body{
+  margin:0
+}
+.p-menubar{
+  background-color: blue;
+}
